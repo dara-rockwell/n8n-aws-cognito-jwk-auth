@@ -1,8 +1,7 @@
 import { JWK } from 'jwk-to-pem';
-import { NodeApiError } from 'n8n-workflow';
 import { User } from './types/user';
 import { AccessTokenPayload } from './utilities/jwt/types/accessTokenPayload';
-import verifyJWT, { JWTVerification } from './utilities/jwt/verifyJWT';
+import { verifyJWT } from './utilities/jwt/verifyJWT';
 
 export interface ExtractUserFromJwtParameters {
 	accessToken: string;
@@ -15,7 +14,7 @@ export function extractUserFromJwt({
 	jwks,
 	ignoreExpiration,
 }: ExtractUserFromJwtParameters): User {
-	console.log({ accessToken: accessToken });
+	console.log({ accessToken });
 
 	const payload = verifyJWT<AccessTokenPayload>({
 		token: accessToken,

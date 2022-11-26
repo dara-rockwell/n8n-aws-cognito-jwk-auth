@@ -7,9 +7,7 @@ export interface JWTVerification {
 	ignoreExpiration?: boolean;
 }
 
-export default function verifyJWT<TokenPayloadType>(
-	verification: JWTVerification,
-): TokenPayloadType {
+export function verifyJWT<TokenPayloadType>(verification: JWTVerification): TokenPayloadType {
 	const { token, key, ignoreExpiration } = verification;
 
 	const pem = jwkToPem(key);

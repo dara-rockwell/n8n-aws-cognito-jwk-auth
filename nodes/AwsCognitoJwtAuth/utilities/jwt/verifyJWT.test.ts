@@ -1,4 +1,4 @@
-import verifyJWT from './verifyJWT';
+import { verifyJWT } from './verifyJWT';
 import jwk from './fixtures/cognito.authenticationToken.jwk.json';
 import { AccessTokenPayload } from './types/accessTokenPayload';
 
