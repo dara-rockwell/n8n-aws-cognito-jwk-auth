@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-aws-cognito-jwk-auth",
+  "name": "n8n-nodes-aws-cognito-jwt-auth",
   "version": "0.1.0",
   "description": "",
   "keywords": [
